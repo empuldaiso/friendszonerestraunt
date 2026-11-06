@@ -1,0 +1,59 @@
+:root {
+    color-scheme: light;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #263a32;
+    background: #f5f7f2;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.65; }
+header, footer { color: #fff; background: #204638; }
+header h1, nav, main { width: min(100% - 2rem, 1050px); margin-inline: auto; }
+header h1 { padding: 1.5rem 0 0.75rem; font: 500 2.2rem Georgia, serif; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; padding: 0.75rem 0 1rem; border-top: 1px solid #ffffff40; }
+nav a { color: #fff; text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: #e7bd59; }
+main { min-height: 65vh; padding: 2.5rem 0 3.5rem; }
+h2 { font: 500 1.8rem Georgia, serif; }
+main > section { margin-top: 2rem; padding: 1.5rem 0; border-top: 1px solid #d5ddd5; }
+main > section:first-of-type { margin: 0; padding: 2.5rem; border: 0; border-left: 5px solid #b94d38; background: #e5eee7; }
+main > section:first-of-type h2 { font-size: 2.4rem; }
+main a { color: #28624d; }
+main > section:first-of-type a { display: inline-block; padding: 0.6rem 1rem; color: #fff; text-decoration: none; background: #b94d38; }
+footer { padding: 1rem; text-align: center; }
+footer p { margin: 0; }
+@media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+    main > section:first-of-type { padding: 1.25rem; }
+    main > section:first-of-type h2 { font-size: 1.8rem; }
+}
+
+nav a {
+    border-bottom: 2px solid transparent;
+    transition: color 160ms ease, border-color 160ms ease;
+}
+nav a:hover, nav a[aria-current="page"] { border-bottom-color: #e7bd59; }
+main > section:first-of-type {
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-color: #244b3c;
+    background-image: linear-gradient(90deg, #17392fee 0%, #17392fc9 48%, #17392f45 100%), url("photos/home-hero.jpg");
+    background-position: center;
+    background-size: cover;
+}
+main > section:first-of-type h2 { max-width: 620px; font-size: 3rem; }
+main > section:first-of-type p { max-width: 520px; color: #f3f5ef; }
+main > section:first-of-type a { margin-top: 0.5rem; transition: background-color 160ms ease; }
+main > section:first-of-type a:hover { background: #963b2a; }
+main > section:not(:first-of-type) { max-width: 760px; }
+a:focus-visible { outline: 3px solid #e7bd59; outline-offset: 4px; }
+@media (max-width: 600px) {
+    main > section:first-of-type { min-height: 340px; background-position: 58% center; }
+    main > section:first-of-type h2 { font-size: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}

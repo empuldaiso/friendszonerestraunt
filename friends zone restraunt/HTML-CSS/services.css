@@ -1,0 +1,51 @@
+:root {
+    color-scheme: light;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #263a32;
+    background: #f5f7f2;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.65; }
+header, footer { color: #fff; background: #204638; }
+header h1, nav, main { width: min(100% - 2rem, 1050px); margin-inline: auto; }
+header h1 { padding: 1.5rem 0 0.75rem; font: 500 2.2rem Georgia, serif; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; padding: 0.75rem 0 1rem; border-top: 1px solid #ffffff40; }
+nav a { color: #fff; text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: #e7bd59; }
+main { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; align-content: start; min-height: 65vh; padding: 2.5rem 0 3.5rem; }
+main > section { padding: 1.25rem; border-top: 4px solid #36735a; background: #fff; }
+main > section:nth-child(2) { border-top-color: #b94d38; }
+main > section:nth-child(3) { border-top-color: #e4b54a; }
+h2 { margin-top: 0; font: 500 1.5rem Georgia, serif; }
+main a { color: #28624d; }
+footer { padding: 1rem; text-align: center; }
+footer p { margin: 0; }
+@media (max-width: 700px) {
+    header h1 { font-size: 1.8rem; }
+    main { grid-template-columns: 1fr; }
+}
+
+nav a {
+    border-bottom: 2px solid transparent;
+    transition: color 160ms ease, border-color 160ms ease;
+}
+nav a:hover, nav a[aria-current="page"] { border-bottom-color: #e7bd59; }
+main > section {
+    min-height: 220px;
+    padding: 1.5rem;
+    border: 1px solid #dce3db;
+    border-top: 5px solid #36735a;
+    border-radius: 3px;
+    box-shadow: 0 8px 20px #203c3010;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+main > section:hover { transform: translateY(-3px); box-shadow: 0 12px 24px #203c3018; }
+main > section:nth-child(2) { border-top-color: #b94d38; }
+main > section:nth-child(3) { border-top-color: #e4b54a; }
+main > section h2 { font-size: 1.7rem; }
+main > section p { color: #4c5d54; }
+a:focus-visible { outline: 3px solid #b94d38; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+}

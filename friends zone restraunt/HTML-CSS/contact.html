@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRIENDS ZONE RESTRAUNT</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="interactions.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Friends Zone</h1>
+        <nav aria-label="Main navigation">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+    </header>
+    <main class="page-contact">
+        <section>
+            <h2>Send us a message</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </p>
+                <p>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </p>
+                <p>
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </p>
+                <button type="submit">Send message</button>
+            </form>
+        </section>
+        <section>
+            <h2>Visit or call</h2>
+            <p>For reservations, directions, or other questions, contact the restaurant directly.</p>
+            <address>Impala Court, near Gateway Supermarket, Jamuhuri Estate, Kibra</address>
+            <iframe
+                title="Map of Impala Court near Gateway Supermarket, Kibra"
+                src="https://www.google.com/maps?q=Impala+Court+near+Gateway+Supermarket%2C+Jamuhuri+Estate%2C+Kibra&output=embed"
+                width="600"
+                height="450"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+    <footer>
+        <p>Friends Zone Restaurant</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+:root {
+    color-scheme: light;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #263a32;
+    background: #f5f7f2;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.6; }
+header, footer { color: #fff; background: #204638; }
+header h1, nav, main { width: min(100% - 2rem, 1050px); margin-inline: auto; }
+header h1 { padding: 1.5rem 0 0.75rem; font: 500 2.2rem Georgia, serif; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; padding: 0.75rem 0 1rem; border-top: 1px solid #ffffff40; }
+nav a { color: #fff; text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: #e7bd59; }
+main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; min-height: 65vh; padding: 2.5rem 0 3.5rem; }
+main > section { padding-top: 1rem; border-top: 3px solid #36735a; }
+h2 { margin-top: 0; font: 500 1.7rem Georgia, serif; }
+input, textarea { width: 100%; margin-top: 0.25rem; padding: 0.7rem; border: 1px solid #aeb9af; border-radius: 3px; color: #263a32; background: #fff; font: inherit; }
+textarea { resize: vertical; }
+button { padding: 0.7rem 1rem; border: 0; border-radius: 3px; color: #fff; background: #b94d38; font: inherit; cursor: pointer; }
+button:hover { background: #963b2a; }
+address { margin: 1rem 0; font-style: normal; font-weight: 700; }
+iframe { display: block; width: 100%; min-height: 340px; border: 0; }
+footer { padding: 1rem; text-align: center; }
+footer p { margin: 0; }
+@media (max-width: 700px) {
+    header h1 { font-size: 1.8rem; }
+    main { grid-template-columns: 1fr; }
+}
+
+nav a {
+    border-bottom: 2px solid transparent;
+    transition: color 160ms ease, border-color 160ms ease;
+}
+nav a:hover, nav a[aria-current="page"] { border-bottom-color: #e7bd59; }
+main > section {
+    padding: 1.5rem;
+    border: 1px solid #d5ddd5;
+    border-top: 4px solid #36735a;
+    background: #fff;
+}
+main > section:nth-child(2) { border-top-color: #b94d38; }
+input:focus, textarea:focus { border-color: #36735a; outline: 3px solid #36735a33; }
+button { transition: background-color 160ms ease, transform 160ms ease; }
+button:hover { transform: translateY(-1px); }
+iframe { min-height: 360px; border-radius: 3px; background: #e8eee8; }
+label { font-weight: 700; }
+a:focus-visible { outline: 3px solid #b94d38; outline-offset: 4px; }
+@media (max-width: 700px) {
+    main > section { padding: 1.1rem; }
+    iframe { min-height: 300px; }
+}
